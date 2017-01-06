@@ -59,11 +59,29 @@ class MONAPI {
             let episodes = json["episodes"].arrayValue
             
             var episodesDictionary = [Date:[Episode]]()
-            episodes.forEach({ (episode) in
+            let calendar = Calendar(identifier: .gregorian)
+            episodes.forEach({ (episodeJson) in
+                let animeId = episodeJson["anime_id"].intValue
+                guard let date = episodeJson["datetime"].date else {
+                    return
+                }
+                let isFirst = episodeJson["is_first"].boolValue
+                let islast = episodeJson["is_last"].boolValue
+                let special = episodeJson["special"].boolValue
                 
+                guard let title = animeDictionary[animeId]?.title else {
+                    return
+                }
+                
+                let episode = Episode(id: animeId, title: title, date: date, first: isFirst, last: islast, special: special)
+                
+                let dayDate = calendar.startOfDay(for: date)
+                var episodeList = episodesDictionary[dayDate] ?? []
+                episodeList.append(episode)
+                episodesDictionary[dayDate] = episodeList
             })
             
-            completion(.success([:]))
+            completion(.success(episodesDictionary))
         })
         
         currentTask?.resume()
