@@ -23,7 +23,7 @@ class MONAPI {
     static let endpoint = "www.monthly.moe"
     static var currentTask: URLSessionDataTask?
     
-    static func getCalendar(forMonth month: Date = Date(), completion: @escaping (Result<[Date:[Episode]]>) -> ()) {
+    static func getCalendar(forMonth month: Date = Date(), completion: @escaping (Result<[Day]>) -> ()) {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = endpoint
@@ -68,12 +68,13 @@ class MONAPI {
                 let isFirst = episodeJson["is_first"].boolValue
                 let islast = episodeJson["is_last"].boolValue
                 let special = episodeJson["special"].boolValue
+                let number = episodeJson["number"].intValue
                 
                 guard let title = animeDictionary[animeId]?.title else {
                     return
                 }
                 
-                let episode = Episode(id: animeId, title: title, date: date, first: isFirst, last: islast, special: special)
+                let episode = Episode(id: animeId, title: title, number: number, date: date, first: isFirst, last: islast, special: special)
                 
                 let dayDate = calendar.startOfDay(for: date)
                 var episodeList = episodesDictionary[dayDate] ?? []
@@ -81,7 +82,12 @@ class MONAPI {
                 episodesDictionary[dayDate] = episodeList
             })
             
-            completion(.success(episodesDictionary))
+            var days = [Day]()
+            episodesDictionary.forEach({ (date, episodes) in
+                days.append(Day(date: date, episodes: episodes))
+            })
+            
+            completion(.success(days))
         })
         
         currentTask?.resume()
@@ -97,8 +103,14 @@ struct Anime {
 struct Episode {
     let id: Int
     let title: String
+    let number: Int
     let date: Date
     let first: Bool
     let last: Bool
     let special: Bool
+}
+
+struct Day {
+    let date: Date
+    let episodes: [Episode]
 }

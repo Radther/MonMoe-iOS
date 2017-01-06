@@ -18,6 +18,7 @@
 		A890ED241E1FC148001267D1 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A890ED081E1FC111001267D1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A8F201AB1E1FC5F0009DC3DB /* JSON+date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F201AA1E1FC5F0009DC3DB /* JSON+date.swift */; };
 		A8F201AD1E1FC6BD009DC3DB /* Date+components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F201AC1E1FC6BD009DC3DB /* Date+components.swift */; };
+		A8F201AF1E1FE2CF009DC3DB /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F201AE1E1FE2CF009DC3DB /* EpisodeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		A890ED281E1FC1E8001267D1 /* Scratchpad.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scratchpad.playground; sourceTree = "<group>"; };
 		A8F201AA1E1FC5F0009DC3DB /* JSON+date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+date.swift"; sourceTree = "<group>"; };
 		A8F201AC1E1FC6BD009DC3DB /* Date+components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+components.swift"; sourceTree = "<group>"; };
+		A8F201AE1E1FE2CF009DC3DB /* EpisodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				A890ED281E1FC1E8001267D1 /* Scratchpad.playground */,
 				A8F201AA1E1FC5F0009DC3DB /* JSON+date.swift */,
 				A8F201AC1E1FC6BD009DC3DB /* Date+components.swift */,
+				A8F201AE1E1FE2CF009DC3DB /* EpisodeCell.swift */,
 			);
 			path = MonMoe;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				A8F201AD1E1FC6BD009DC3DB /* Date+components.swift in Sources */,
 				A890ECEA1E1FC03F001267D1 /* AppDelegate.swift in Sources */,
 				A890ECFC1E1FC0BD001267D1 /* MONAPI.swift in Sources */,
+				A8F201AF1E1FE2CF009DC3DB /* EpisodeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
