@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  MonMoe
+//  MonMoeApp
 //
 //  Created by Tom Sinlgeton on 06/01/2017.
 //  Copyright © 2017 Tom Sinlgeton. All rights reserved.
@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

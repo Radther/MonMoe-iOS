@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MonMoe
+//  MonMoeApp
 //
 //  Created by Tom Sinlgeton on 06/01/2017.
 //  Copyright © 2017 Tom Sinlgeton. All rights reserved.
