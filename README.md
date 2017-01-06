@@ -12,7 +12,7 @@ To install this app you will **need** a Mac.
 
 ### 1. Install Xcode
 
-First you will need to install Xcode, which can be done through the Mac App Store.![Appstore§](README_FILES/Appstore§.png)
+First you will need to install Xcode, which can be done through the Mac App Store.![Appstore§](README_FILES/Appstore1.png)
 
 In the search bar at the top right type `xcode` and hit enter.
 
