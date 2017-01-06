@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A890ECEA1E1FC03F001267D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890ECE91E1FC03F001267D1 /* AppDelegate.swift */; };
+		A890ECEC1E1FC03F001267D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890ECEB1E1FC03F001267D1 /* ViewController.swift */; };
+		A890ECEF1E1FC03F001267D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A890ECED1E1FC03F001267D1 /* Main.storyboard */; };
+		A890ECF11E1FC03F001267D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A890ECF01E1FC03F001267D1 /* Assets.xcassets */; };
+		A890ECF41E1FC03F001267D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A890ECF21E1FC03F001267D1 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A890ECE61E1FC03F001267D1 /* MonMoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonMoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A890ECE91E1FC03F001267D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A890ECEB1E1FC03F001267D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A890ECEE1E1FC03F001267D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A890ECF01E1FC03F001267D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A890ECF31E1FC03F001267D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A890ECF51E1FC03F001267D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A890ECE31E1FC03F001267D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A890ECDD1E1FC03F001267D1 = {
+			isa = PBXGroup;
+			children = (
+				A890ECE81E1FC03F001267D1 /* MonMoe */,
+				A890ECE71E1FC03F001267D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A890ECE71E1FC03F001267D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A890ECE61E1FC03F001267D1 /* MonMoe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A890ECE81E1FC03F001267D1 /* MonMoe */ = {
+			isa = PBXGroup;
+			children = (
+				A890ECE91E1FC03F001267D1 /* AppDelegate.swift */,
+				A890ECEB1E1FC03F001267D1 /* ViewController.swift */,
+				A890ECED1E1FC03F001267D1 /* Main.storyboard */,
+				A890ECF01E1FC03F001267D1 /* Assets.xcassets */,
+				A890ECF21E1FC03F001267D1 /* LaunchScreen.storyboard */,
+				A890ECF51E1FC03F001267D1 /* Info.plist */,
+			);
+			path = MonMoe;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A890ECE51E1FC03F001267D1 /* MonMoe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A890ECF81E1FC03F001267D1 /* Build configuration list for PBXNativeTarget "MonMoe" */;
+			buildPhases = (
+				A890ECE21E1FC03F001267D1 /* Sources */,
+				A890ECE31E1FC03F001267D1 /* Frameworks */,
+				A890ECE41E1FC03F001267D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonMoe;
+			productName = MonMoe;
+			productReference = A890ECE61E1FC03F001267D1 /* MonMoe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A890ECDE1E1FC03F001267D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Tom Sinlgeton";
+				TargetAttributes = {
+					A890ECE51E1FC03F001267D1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = K68WDDJ6BS;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A890ECE11E1FC03F001267D1 /* Build configuration list for PBXProject "MonMoe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A890ECDD1E1FC03F001267D1;
+			productRefGroup = A890ECE71E1FC03F001267D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A890ECE51E1FC03F001267D1 /* MonMoe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A890ECE41E1FC03F001267D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A890ECF41E1FC03F001267D1 /* LaunchScreen.storyboard in Resources */,
+				A890ECF11E1FC03F001267D1 /* Assets.xcassets in Resources */,
+				A890ECEF1E1FC03F001267D1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A890ECE21E1FC03F001267D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A890ECEC1E1FC03F001267D1 /* ViewController.swift in Sources */,
+				A890ECEA1E1FC03F001267D1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A890ECED1E1FC03F001267D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A890ECEE1E1FC03F001267D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A890ECF21E1FC03F001267D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A890ECF31E1FC03F001267D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A890ECF61E1FC03F001267D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A890ECF71E1FC03F001267D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A890ECF91E1FC03F001267D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K68WDDJ6BS;
+				INFOPLIST_FILE = MonMoe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ink.designdev.MonMoe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A890ECFA1E1FC03F001267D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K68WDDJ6BS;
+				INFOPLIST_FILE = MonMoe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ink.designdev.MonMoe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A890ECE11E1FC03F001267D1 /* Build configuration list for PBXProject "MonMoe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A890ECF61E1FC03F001267D1 /* Debug */,
+				A890ECF71E1FC03F001267D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A890ECF81E1FC03F001267D1 /* Build configuration list for PBXNativeTarget "MonMoe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A890ECF91E1FC03F001267D1 /* Debug */,
+				A890ECFA1E1FC03F001267D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A890ECDE1E1FC03F001267D1 /* Project object */;
+}
