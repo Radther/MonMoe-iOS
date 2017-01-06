@@ -13,16 +13,31 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var days: [Day]?
     
+    var today: Date = Date()
+    
     let refreshControl: UIRefreshControl = {
         let control = UIRefreshControl(frame: .zero)
         control.translatesAutoresizingMaskIntoConstraints = false
         return control
     }()
     
-//    let sectionDateFormatter: DateFormatter {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "EEEE, dd"
-//    }
+    let sectionDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, dd, MMMM, yyyy"
+        return formatter
+    }()
+    
+    let timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        return formatter
+    }()
+    
+    let dayFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd"
+        return formatter
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +69,14 @@ class ViewController: UIViewController {
         MONAPI.getCalendar { (result) in
             switch result {
             case let .success(days):
+                let sortedDays = days.sorted(by: { (day1, day2) -> Bool in
+                    day1.date < day2.date
+                })
                 DispatchQueue.main.async {
-                    self.days = days
+                    self.days = sortedDays
                     self.tableView.reloadData()
                     self.refreshControl.endRefreshing()
+                    self.today = Date()
                 }
             case let .failure(error):
                 print(error)
@@ -83,6 +102,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.titleLabel.text = episode.title
         cell.detailLabel.text = "Episode: \(episode.number)"
+        cell.timeLabel.text = timeFormatter.string(from: episode.date)
         
         switch (episode.first, episode.last) {
         case (true, false):
@@ -93,13 +113,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.colorView.backgroundColor = UIColor.gray
         }
         
+        cell.airedView.isHidden = episode.date > today
+        
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        let day = days![section]
-//        
-//    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let day = days![section]
+        return sectionDateFormatter.string(from: day.date)
+    }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return days?.map({ (day) -> String in
+            dayFormatter.string(from: day.date)
+        })
+    }
     
 }
 

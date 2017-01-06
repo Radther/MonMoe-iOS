@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,51 +32,60 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7sk-0g-JsX" id="D7H-dk-YTv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6N-Ym-1KZ">
-                                                    <rect key="frame" x="94.5" y="22" width="258.5" height="23.5"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6N-Ym-1KZ">
+                                                    <rect key="frame" x="84.5" y="22" width="268.5" height="25"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSo-Xp-0po">
-                                                    <rect key="frame" x="94.5" y="49.5" width="258.5" height="24"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <rect key="frame" x="84.5" y="51" width="268.5" height="22.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="09:41" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdP-YN-JJF">
-                                                    <rect key="frame" x="38" y="27.5" width="43" height="17"/>
+                                                    <rect key="frame" x="28" y="26.5" width="43" height="17"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
                                                     <color key="textColor" red="0.85882352939999995" green="0.30196078430000001" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TSA-lh-E5s">
-                                                    <rect key="frame" x="0.0" y="0.0" width="24" height="93.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="14" height="93.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="24" id="aZK-ZR-JtG"/>
+                                                        <constraint firstAttribute="width" constant="14" id="aZK-ZR-JtG"/>
                                                     </constraints>
+                                                </view>
+                                                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jrl-Cj-Igs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="f6N-Ym-1KZ" firstAttribute="top" secondItem="D7H-dk-YTv" secondAttribute="topMargin" constant="14" id="2ds-XS-TZt"/>
                                                 <constraint firstItem="bdP-YN-JJF" firstAttribute="leading" secondItem="TSA-lh-E5s" secondAttribute="trailing" constant="14" id="7dV-9J-UXs"/>
                                                 <constraint firstItem="f6N-Ym-1KZ" firstAttribute="leading" secondItem="bdP-YN-JJF" secondAttribute="trailing" constant="14" id="8LZ-89-PzI"/>
+                                                <constraint firstItem="jrl-Cj-Igs" firstAttribute="top" secondItem="D7H-dk-YTv" secondAttribute="top" id="AwK-ZC-S2S"/>
                                                 <constraint firstAttribute="bottom" secondItem="TSA-lh-E5s" secondAttribute="bottom" id="Fpv-Je-WNK"/>
                                                 <constraint firstItem="TSA-lh-E5s" firstAttribute="top" secondItem="D7H-dk-YTv" secondAttribute="top" id="GcZ-0f-Hyb"/>
                                                 <constraint firstItem="jSo-Xp-0po" firstAttribute="leading" secondItem="f6N-Ym-1KZ" secondAttribute="leading" id="PoC-HI-q1W"/>
+                                                <constraint firstAttribute="trailing" secondItem="jrl-Cj-Igs" secondAttribute="trailing" id="TbW-la-mTw"/>
+                                                <constraint firstAttribute="bottom" secondItem="jrl-Cj-Igs" secondAttribute="bottom" id="dsZ-bQ-4jT"/>
                                                 <constraint firstItem="jSo-Xp-0po" firstAttribute="top" secondItem="f6N-Ym-1KZ" secondAttribute="bottom" constant="4" id="eDJ-Sa-Y12"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="f6N-Ym-1KZ" secondAttribute="trailing" constant="14" id="f3c-tE-Bx8"/>
-                                                <constraint firstItem="bdP-YN-JJF" firstAttribute="baseline" secondItem="f6N-Ym-1KZ" secondAttribute="baseline" id="iVh-nS-o22"/>
+                                                <constraint firstItem="jrl-Cj-Igs" firstAttribute="leading" secondItem="D7H-dk-YTv" secondAttribute="leading" id="gzM-uR-uhu"/>
+                                                <constraint firstItem="bdP-YN-JJF" firstAttribute="baseline" secondItem="f6N-Ym-1KZ" secondAttribute="firstBaseline" id="iVh-nS-o22"/>
                                                 <constraint firstItem="jSo-Xp-0po" firstAttribute="trailing" secondItem="f6N-Ym-1KZ" secondAttribute="trailing" id="tzo-4g-qvH"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="jSo-Xp-0po" secondAttribute="bottom" constant="12" id="u6T-Cu-ByJ"/>
                                                 <constraint firstItem="TSA-lh-E5s" firstAttribute="leading" secondItem="D7H-dk-YTv" secondAttribute="leading" id="vVe-wn-HVG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="airedView" destination="jrl-Cj-Igs" id="ul5-sL-m49"/>
                                             <outlet property="colorView" destination="TSA-lh-E5s" id="P3y-kh-qy5"/>
                                             <outlet property="detailLabel" destination="jSo-Xp-0po" id="xvK-LS-4FT"/>
                                             <outlet property="timeLabel" destination="bdP-YN-JJF" id="htR-MW-8qm"/>

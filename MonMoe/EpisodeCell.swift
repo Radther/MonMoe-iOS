@@ -13,5 +13,6 @@ class EpisodeCell: UITableViewCell {
     @IBOutlet var detailLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var colorView: UIView!
+    @IBOutlet var airedView: UIView!
     
 }
