@@ -23,11 +23,16 @@ class MONAPI {
         urlComponents.queryItems = [dateQuery]
         
         _ = URLSession.shared.dataTask(with: urlComponents.url!, completionHandler: { (data, response, error) in
-            guard error == nil else {
+            guard error == nil, let data = data else {
                 print(error!)
                 return
             }
             
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                return
+            }
+            
+            let json = JSON(data: data)
             
         })
         

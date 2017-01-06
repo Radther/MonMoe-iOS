@@ -13,7 +13,90 @@
 		A890ECF11E1FC03F001267D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A890ECF01E1FC03F001267D1 /* Assets.xcassets */; };
 		A890ECF41E1FC03F001267D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A890ECF21E1FC03F001267D1 /* LaunchScreen.storyboard */; };
 		A890ECFC1E1FC0BD001267D1 /* MONAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890ECFB1E1FC0BD001267D1 /* MONAPI.swift */; };
+		A890ED1C1E1FC120001267D1 /* MonMoeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890ED1B1E1FC120001267D1 /* MonMoeTests.swift */; };
+		A890ED231E1FC148001267D1 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A890ED081E1FC111001267D1 /* SwiftyJSON.framework */; };
+		A890ED241E1FC148001267D1 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A890ED081E1FC111001267D1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A890ED071E1FC111001267D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		A890ED091E1FC111001267D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = "SwiftyJSON iOS Tests";
+		};
+		A890ED0B1E1FC111001267D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC5B1A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX";
+		};
+		A890ED0D1E1FC111001267D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC651A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX Tests";
+		};
+		A890ED0F1E1FC111001267D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4D7CCE81B9465A700EE7221;
+			remoteInfo = "SwiftyJSON watchOS";
+		};
+		A890ED111E1FC111001267D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7236B4F61BAC14150020529B;
+			remoteInfo = "SwiftyJSON tvOS";
+		};
+		A890ED131E1FC111001267D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A8580F741BCF5C5B00DA927B;
+			remoteInfo = "SwiftyJSON tvOS Tests";
+		};
+		A890ED1E1E1FC120001267D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A890ECDE1E1FC03F001267D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A890ECE51E1FC03F001267D1;
+			remoteInfo = MonMoe;
+		};
+		A890ED251E1FC148001267D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A890ED271E1FC148001267D1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A890ED241E1FC148001267D1 /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A890ECE61E1FC03F001267D1 /* MonMoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonMoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +107,22 @@
 		A890ECF31E1FC03F001267D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A890ECF51E1FC03F001267D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A890ECFB1E1FC0BD001267D1 /* MONAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MONAPI.swift; sourceTree = "<group>"; };
+		A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
+		A890ED191E1FC120001267D1 /* MonMoeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonMoeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A890ED1B1E1FC120001267D1 /* MonMoeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonMoeTests.swift; sourceTree = "<group>"; };
+		A890ED1D1E1FC120001267D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A890ECE31E1FC03F001267D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A890ED231E1FC148001267D1 /* SwiftyJSON.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A890ED161E1FC120001267D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,7 +135,9 @@
 		A890ECDD1E1FC03F001267D1 = {
 			isa = PBXGroup;
 			children = (
+				A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */,
 				A890ECE81E1FC03F001267D1 /* MonMoe */,
+				A890ED1A1E1FC120001267D1 /* MonMoeTests */,
 				A890ECE71E1FC03F001267D1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				A890ECE61E1FC03F001267D1 /* MonMoe.app */,
+				A890ED191E1FC120001267D1 /* MonMoeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +165,29 @@
 			path = MonMoe;
 			sourceTree = "<group>";
 		};
+		A890ECFE1E1FC111001267D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A890ED081E1FC111001267D1 /* SwiftyJSON.framework */,
+				A890ED0A1E1FC111001267D1 /* SwiftyJSON iOS Tests.xctest */,
+				A890ED0C1E1FC111001267D1 /* SwiftyJSON.framework */,
+				A890ED0E1E1FC111001267D1 /* SwiftyJSON OSX Tests.xctest */,
+				A890ED101E1FC111001267D1 /* SwiftyJSON.framework */,
+				A890ED121E1FC111001267D1 /* SwiftyJSON.framework */,
+				A890ED141E1FC111001267D1 /* SwiftyJSON tvOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A890ED1A1E1FC120001267D1 /* MonMoeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A890ED1B1E1FC120001267D1 /* MonMoeTests.swift */,
+				A890ED1D1E1FC120001267D1 /* Info.plist */,
+			);
+			path = MonMoeTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +198,35 @@
 				A890ECE21E1FC03F001267D1 /* Sources */,
 				A890ECE31E1FC03F001267D1 /* Frameworks */,
 				A890ECE41E1FC03F001267D1 /* Resources */,
+				A890ED271E1FC148001267D1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A890ED261E1FC148001267D1 /* PBXTargetDependency */,
 			);
 			name = MonMoe;
 			productName = MonMoe;
 			productReference = A890ECE61E1FC03F001267D1 /* MonMoe.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A890ED181E1FC120001267D1 /* MonMoeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A890ED201E1FC120001267D1 /* Build configuration list for PBXNativeTarget "MonMoeTests" */;
+			buildPhases = (
+				A890ED151E1FC120001267D1 /* Sources */,
+				A890ED161E1FC120001267D1 /* Frameworks */,
+				A890ED171E1FC120001267D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A890ED1F1E1FC120001267D1 /* PBXTargetDependency */,
+			);
+			name = MonMoeTests;
+			productName = MonMoeTests;
+			productReference = A890ED191E1FC120001267D1 /* MonMoeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -102,6 +243,12 @@
 						DevelopmentTeam = K68WDDJ6BS;
 						ProvisioningStyle = Automatic;
 					};
+					A890ED181E1FC120001267D1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = K68WDDJ6BS;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A890ECE51E1FC03F001267D1;
+					};
 				};
 			};
 			buildConfigurationList = A890ECE11E1FC03F001267D1 /* Build configuration list for PBXProject "MonMoe" */;
@@ -115,12 +262,71 @@
 			mainGroup = A890ECDD1E1FC03F001267D1;
 			productRefGroup = A890ECE71E1FC03F001267D1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A890ECFE1E1FC111001267D1 /* Products */;
+					ProjectRef = A890ECFD1E1FC111001267D1 /* SwiftyJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A890ECE51E1FC03F001267D1 /* MonMoe */,
+				A890ED181E1FC120001267D1 /* MonMoeTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A890ED081E1FC111001267D1 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = A890ED071E1FC111001267D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A890ED0A1E1FC111001267D1 /* SwiftyJSON iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON iOS Tests.xctest";
+			remoteRef = A890ED091E1FC111001267D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A890ED0C1E1FC111001267D1 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = A890ED0B1E1FC111001267D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A890ED0E1E1FC111001267D1 /* SwiftyJSON OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON OSX Tests.xctest";
+			remoteRef = A890ED0D1E1FC111001267D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A890ED101E1FC111001267D1 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = A890ED0F1E1FC111001267D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A890ED121E1FC111001267D1 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = A890ED111E1FC111001267D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A890ED141E1FC111001267D1 /* SwiftyJSON tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON tvOS Tests.xctest";
+			remoteRef = A890ED131E1FC111001267D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A890ECE41E1FC03F001267D1 /* Resources */ = {
@@ -130,6 +336,13 @@
 				A890ECF41E1FC03F001267D1 /* LaunchScreen.storyboard in Resources */,
 				A890ECF11E1FC03F001267D1 /* Assets.xcassets in Resources */,
 				A890ECEF1E1FC03F001267D1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A890ED171E1FC120001267D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +359,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A890ED151E1FC120001267D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A890ED1C1E1FC120001267D1 /* MonMoeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A890ED1F1E1FC120001267D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A890ECE51E1FC03F001267D1 /* MonMoe */;
+			targetProxy = A890ED1E1E1FC120001267D1 /* PBXContainerItemProxy */;
+		};
+		A890ED261E1FC148001267D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON iOS";
+			targetProxy = A890ED251E1FC148001267D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A890ECED1E1FC03F001267D1 /* Main.storyboard */ = {
@@ -264,6 +498,7 @@
 		A890ECF91E1FC03F001267D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K68WDDJ6BS;
 				INFOPLIST_FILE = MonMoe/Info.plist;
@@ -277,6 +512,7 @@
 		A890ECFA1E1FC03F001267D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K68WDDJ6BS;
 				INFOPLIST_FILE = MonMoe/Info.plist;
@@ -284,6 +520,34 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ink.designdev.MonMoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A890ED211E1FC120001267D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K68WDDJ6BS;
+				INFOPLIST_FILE = MonMoeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ink.designdev.MonMoeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonMoe.app/MonMoe";
+			};
+			name = Debug;
+		};
+		A890ED221E1FC120001267D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = K68WDDJ6BS;
+				INFOPLIST_FILE = MonMoeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ink.designdev.MonMoeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonMoe.app/MonMoe";
 			};
 			name = Release;
 		};
@@ -304,6 +568,14 @@
 			buildConfigurations = (
 				A890ECF91E1FC03F001267D1 /* Debug */,
 				A890ECFA1E1FC03F001267D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A890ED201E1FC120001267D1 /* Build configuration list for PBXNativeTarget "MonMoeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A890ED211E1FC120001267D1 /* Debug */,
+				A890ED221E1FC120001267D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
