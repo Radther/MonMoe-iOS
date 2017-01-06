@@ -111,6 +111,7 @@
 		A890ED191E1FC120001267D1 /* MonMoeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonMoeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A890ED1B1E1FC120001267D1 /* MonMoeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonMoeTests.swift; sourceTree = "<group>"; };
 		A890ED1D1E1FC120001267D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A890ED281E1FC1E8001267D1 /* Scratchpad.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Scratchpad.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +162,7 @@
 				A890ECF01E1FC03F001267D1 /* Assets.xcassets */,
 				A890ECF21E1FC03F001267D1 /* LaunchScreen.storyboard */,
 				A890ECF51E1FC03F001267D1 /* Info.plist */,
+				A890ED281E1FC1E8001267D1 /* Scratchpad.playground */,
 			);
 			path = MonMoe;
 			sourceTree = "<group>";
@@ -570,6 +572,7 @@
 				A890ECFA1E1FC03F001267D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A890ED201E1FC120001267D1 /* Build configuration list for PBXNativeTarget "MonMoeTests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +581,7 @@
 				A890ED221E1FC120001267D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

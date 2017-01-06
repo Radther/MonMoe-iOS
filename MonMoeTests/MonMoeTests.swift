@@ -23,9 +23,13 @@ class MonMoeTests: XCTestCase {
     }
     
     func testAPI() {
+        let requestExpectation = expectation(description: "Request")
         MONAPI.getCalendar { (episodes) in
             print(episodes)
+            requestExpectation.fulfill()
         }
+        
+        waitForExpectations(timeout: 10, handler: nil)
     }
     
 }
