@@ -4,9 +4,7 @@ This is a quickly built iOS app to view the current month. The data is collected
 
 ## Screenshots
 
-![IMG1](README_FILES/IMG1.png)
-
-![IMG2](README_FILES/IMG2.png)
+![IMG1](README_FILES/image.png)
 
 ## Instalation
 
