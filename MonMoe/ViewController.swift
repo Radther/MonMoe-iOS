@@ -11,7 +11,37 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    
+    let searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: nil)
+        controller.dimsBackgroundDuringPresentation = false
+        controller.hidesNavigationBarDuringPresentation = true
+        return controller
+    }()
+    
+    var filtering: Bool = false
+    
     var days: [Day]?
+    var tableViewDays: [Day]? {
+        switch filtering {
+        case true:
+            var filteredDays = [Day]()
+            days?.forEach({ (day) in
+                let newEpisodes = day.episodes.filter({ (episode) -> Bool in
+                    guard let searchText = searchController.searchBar.text?.trimmingCharacters(in: .newlines) else {
+                        return false
+                    }
+                    return episode.title.localizedCaseInsensitiveContains(searchText)
+                })
+                filteredDays.append(Day(date: day.date, episodes: newEpisodes))
+            })
+            return filteredDays.filter({ (day) -> Bool in
+                day.episodes.count>0
+            })
+        case false:
+            return days
+        }
+    }
     
     var today: Date = Date()
     
@@ -52,6 +82,10 @@ class ViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.refreshControl = refreshControl
         
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
+        tableView.tableHeaderView = searchController.searchBar
+        
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
     }
 
@@ -83,21 +117,41 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
+        NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: nil) { (notification) in
+            guard let keyboardRect = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? CGRect else {
+                return
+            }
+            
+            self.tableView.contentInset.bottom = keyboardRect.height
+        }
+        
+        NotificationCenter.default.addObserver(forName: .UIKeyboardWillHide, object: nil, queue: nil) { (notification) in
+            self.tableView.contentInset.bottom = 0
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return days?.count ?? 0
+        return tableViewDays?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return days![section].episodes.count
+        return tableViewDays![section].episodes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let episode = days![indexPath.section].episodes[indexPath.row]
+        let episode = tableViewDays![indexPath.section].episodes[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeCell", for: indexPath) as! EpisodeCell
         
         cell.titleLabel.text = episode.title
@@ -119,15 +173,36 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let day = days![section]
+        let day = tableViewDays![section]
         return sectionDateFormatter.string(from: day.date)
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return days?.map({ (day) -> String in
+        return tableViewDays?.map({ (day) -> String in
             dayFormatter.string(from: day.date)
         })
     }
     
 }
 
+extension ViewController: UISearchBarDelegate, UISearchControllerDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("Text Change")
+        updateTableView()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        filtering = true
+        updateTableView()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        filtering = false
+        updateTableView()
+    }
+    
+    func updateTableView() {
+        tableView.reloadData()
+    }
+}
